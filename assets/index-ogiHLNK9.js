@@ -43,7 +43,11 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red" class="size-6">
       <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
     </svg>
-  `,iconSize:[24,24],iconAnchor:[12,12]});function Oc({trees:e,selectedTrees:t,toggleTree:n,onMapClick:r,previewLatitude:i,previewLongitude:a}){let[o,s]=(0,x.useState)(null);function c(){o&&navigator.geolocation.getCurrentPosition(e=>{o.setView([e.coords.latitude,e.coords.longitude],20)},e=>{console.error(e),alert(`無法取得位置 (Unable to retrieve location)`)})}function l(){let e=gc();return(0,x.useEffect)(()=>{s(e),navigator.geolocation.getCurrentPosition(t=>{e.setView([t.coords.latitude,t.coords.longitude],e.getZoom())},e=>{console.error(e),alert(`無法取得位置 (Unable to retrieve location)`)})},[e]),null}function u(){return _c({click(e){r&&r(e.latlng.lat,e.latlng.lng)}}),null}return(0,Y.jsxs)(`div`,{className:`relative`,children:[(0,Y.jsxs)(bc,{center:[Ic[0],Ic[1]],zoom:20,className:`h-[300px] w-full z-0`,children:[(0,Y.jsx)(l,{}),(0,Y.jsx)(u,{}),(0,Y.jsx)(Cc,{attribution:`Tiles © Esri`,url:`https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}`}),e.map(e=>{let r=t.some(t=>t.id===e.id);return(0,Y.jsx)(xc,{position:[Number(e.latitude),Number(e.longitude)],icon:r?Ec:Tc,opacity:r?1:.75,eventHandlers:{click:()=>{n(e.id)}}},e.id)}),i&&a&&(0,Y.jsx)(xc,{position:[i,a],icon:Dc})]}),(0,Y.jsx)(`button`,{type:`button`,onClick:c,className:`
+  `,iconSize:[24,24],iconAnchor:[12,12]}),Oc=(0,vc.divIcon)({className:``,html:`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" class="size-3">
+      <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+    </svg>
+  `,iconSize:[24,24],iconAnchor:[12,12]});function kc({trees:e,selectedTrees:t,toggleTree:n,onMapClick:r,previewLatitude:i,previewLongitude:a}){let[o,s]=(0,x.useState)(null);function c(){o&&navigator.geolocation.getCurrentPosition(e=>{o.setView([e.coords.latitude,e.coords.longitude],19)},e=>{console.error(e),alert(`無法取得位置 (Unable to retrieve location)`)})}function l(){let e=gc();return(0,x.useEffect)(()=>{s(e),navigator.geolocation.getCurrentPosition(t=>{e.setView([t.coords.latitude,t.coords.longitude],e.getZoom())},e=>{console.error(e),alert(`無法取得位置 (Unable to retrieve location)`)})},[e]),null}function u(){return _c({click(e){r&&r(e.latlng.lat,e.latlng.lng)}}),null}return(0,Y.jsxs)(`div`,{className:`relative`,children:[(0,Y.jsxs)(bc,{center:[Lc[0],Lc[1]],zoom:19,maxZoom:22,className:`h-[300px] w-full z-0`,children:[(0,Y.jsx)(l,{}),(0,Y.jsx)(u,{}),(0,Y.jsx)(Cc,{maxZoom:22,maxNativeZoom:19,attribution:`Tiles © Esri`,url:`https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}`}),e.map(e=>{let i=t.some(t=>t.id===e.id);return(0,Y.jsx)(xc,{position:[Number(e.latitude),Number(e.longitude)],icon:i?Ec:r?Oc:Tc,opacity:i?1:.75,eventHandlers:{click:()=>{n(e.id)}}},e.id)}),i&&a&&(0,Y.jsx)(xc,{position:[i,a],icon:Dc})]}),(0,Y.jsx)(`button`,{type:`button`,onClick:c,className:`
           absolute
           bottom-4
           right-4
@@ -59,13 +63,13 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
 
           hover:bg-gray-100
           transition
-        `,children:(0,Y.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 24 24`,fill:`currentColor`,className:`size-6`,children:(0,Y.jsx)(`path`,{fillRule:`evenodd`,d:`m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z`,clipRule:`evenodd`})})})]})}function kc(){let[e,t]=(0,x.useState)(Fc[0]),[n,r]=(0,x.useState)(``),[i,a]=(0,x.useState)([]),[o,s]=(0,x.useState)([]);(0,x.useEffect)(()=>{c()},[]);async function c(){let{data:e,error:t}=await Js.from(`trees`).select(`*`);if(t){console.error(t);return}a(e||[]),console.log(`Fetched trees:`,e)}async function l(i){i.preventDefault();let{data:a,error:c}=await Js.from(`sightings`).insert([{species:e,description:n}]).select().single();if(c){console.error(c);return}let l=o.map(e=>({sighting_id:a.id,tree_id:e.id})),{error:u}=await Js.from(`sighting_trees`).insert(l);if(u){console.error(u);return}alert(`Crop Raid Report Submitted!`),t(Fc[0]),r(``),s([])}function u(e){if(o.some(t=>t.id===e))s(o.filter(t=>t.id!==e));else{let t=i.find(t=>t.id===e);t&&s([...o,t])}}return(0,Y.jsxs)(`div`,{className:`h-screen overflow-hidden bg-green-50`,children:[(0,Y.jsx)(`div`,{className:`
+        `,children:(0,Y.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 24 24`,fill:`currentColor`,className:`size-6`,children:(0,Y.jsx)(`path`,{fillRule:`evenodd`,d:`m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z`,clipRule:`evenodd`})})})]})}function Ac(){let[e,t]=(0,x.useState)(Ic[0]),[n,r]=(0,x.useState)(``),[i,a]=(0,x.useState)([]),[o,s]=(0,x.useState)([]);(0,x.useEffect)(()=>{c()},[]);async function c(){let{data:e,error:t}=await Js.from(`trees`).select(`*`);if(t){console.error(t);return}a(e||[]),console.log(`Fetched trees:`,e)}async function l(i){i.preventDefault();let{data:a,error:c}=await Js.from(`sightings`).insert([{species:e,description:n}]).select().single();if(c){console.error(c);return}let l=o.map(e=>({sighting_id:a.id,tree_id:e.id})),{error:u}=await Js.from(`sighting_trees`).insert(l);if(u){console.error(u);return}alert(`Crop Raid Report Submitted!`),t(Ic[0]),r(``),s([])}function u(e){if(o.some(t=>t.id===e))s(o.filter(t=>t.id!==e));else{let t=i.find(t=>t.id===e);t&&s([...o,t])}}return(0,Y.jsxs)(`div`,{className:`h-screen overflow-hidden bg-green-50`,children:[(0,Y.jsx)(`div`,{className:`
           fixed
           top-0
           left-0
           right-0
           z-10
-        `,children:(0,Y.jsx)(`div`,{className:`relative`,children:(0,Y.jsx)(Oc,{trees:i,selectedTrees:o,toggleTree:u})})}),(0,Y.jsx)(`div`,{className:`
+        `,children:(0,Y.jsx)(`div`,{className:`relative`,children:(0,Y.jsx)(kc,{trees:i,selectedTrees:o,toggleTree:u})})}),(0,Y.jsx)(`div`,{className:`
           pt-[320px]
           h-screen
           overflow-y-auto
@@ -80,7 +84,7 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
                     focus:outline-none
                     focus:ring-2
                     focus:ring-green-500
-                  `,children:Fc.map(e=>(0,Y.jsx)(`option`,{value:e,children:e},e))})]}),(0,Y.jsxs)(`div`,{className:`space-y-2 mb-4`,children:[(0,Y.jsx)(`label`,{className:`block mb-1 font-medium`,children:`受損植株 (Affected Trees)`}),o.length===0&&(0,Y.jsx)(`div`,{className:`text-gray-500 text-sm`,children:`未選取 (None selected)`}),o.map(e=>(0,Y.jsxs)(`div`,{className:`
+                  `,children:Ic.map(e=>(0,Y.jsx)(`option`,{value:e,children:e},e))})]}),(0,Y.jsxs)(`div`,{className:`space-y-2 mb-4`,children:[(0,Y.jsx)(`label`,{className:`block mb-1 font-medium`,children:`受損植株 (Affected Trees)`}),o.length===0&&(0,Y.jsx)(`div`,{className:`text-gray-500 text-sm`,children:`未選取 (None selected)`}),o.map(e=>(0,Y.jsxs)(`div`,{className:`
                       flex
                       items-center
                       justify-between
@@ -109,7 +113,7 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
                   font-medium
                   hover:bg-green-800
                   transition-colors
-                `,children:`上傳 (Submit)`})]})]})})})]})}function Ac(e){return(0,vc.divIcon)({className:``,html:`
+                `,children:`上傳 (Submit)`})]})]})})})]})}function jc(e){return(0,vc.divIcon)({className:``,html:`
       <div
         style="
           width: 18px;
@@ -119,16 +123,16 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
           border: 2px solid white;
         "
       ></div>
-    `,iconSize:[18,18],iconAnchor:[9,9]})}function jc(e){return e>=6?`#dc2626`:e>=3?`#ea580c`:e>=1?`#ca8a04`:`#16a34a`}function Mc(){let e=gc();return(0,x.useEffect)(()=>{navigator.geolocation.getCurrentPosition(t=>{e.setView([t.coords.latitude,t.coords.longitude],18)},e=>{console.error(e),alert(`無法取得位置 (Unable to retrieve location)`)})},[e]),null}function Nc(){let[e,t]=(0,x.useState)([]);(0,x.useEffect)(()=>{n()},[]);async function n(){let{data:e}=await Js.from(`trees`).select(`*`),{data:n}=await Js.from(`sighting_trees`).select(`*`);if(!e||!n)return;let r={};n.forEach(e=>{r[e.tree_id]=(r[e.tree_id]||0)+1}),t(e.map(e=>({...e,sightingsCount:r[e.id]||0})))}return(0,Y.jsx)(`div`,{className:`h-[calc(100vh-115px)]`,children:(0,Y.jsxs)(bc,{center:[Ic[0],Ic[1]],zoom:17,className:`h-full w-full`,children:[(0,Y.jsx)(Mc,{}),(0,Y.jsx)(Cc,{attribution:`Tiles © Esri`,url:`https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}`}),e.map(e=>(0,Y.jsx)(xc,{position:[Number(e.latitude),Number(e.longitude)],icon:Ac(jc(e.sightingsCount)),children:(0,Y.jsx)(Sc,{children:(0,Y.jsxs)(`div`,{className:`space-y-2`,children:[(0,Y.jsx)(`div`,{className:`font-bold text-green-800`,children:e.name}),(0,Y.jsxs)(`div`,{children:[`目擊次數 (Sightings):`,` `,e.sightingsCount]}),(0,Y.jsx)(`div`,{className:`
+    `,iconSize:[18,18],iconAnchor:[9,9]})}function Mc(e){return e>=6?`#dc2626`:e>=3?`#ea580c`:e>=1?`#ca8a04`:`#16a34a`}function Nc(){let e=gc();return(0,x.useEffect)(()=>{navigator.geolocation.getCurrentPosition(t=>{e.setView([t.coords.latitude,t.coords.longitude],18)},e=>{console.error(e),alert(`無法取得位置 (Unable to retrieve location)`)})},[e]),null}function Pc(){let[e,t]=(0,x.useState)([]);(0,x.useEffect)(()=>{n()},[]);async function n(){let{data:e}=await Js.from(`trees`).select(`*`),{data:n}=await Js.from(`sighting_trees`).select(`*`);if(!e||!n)return;let r={};n.forEach(e=>{r[e.tree_id]=(r[e.tree_id]||0)+1}),t(e.map(e=>({...e,sightingsCount:r[e.id]||0})))}return(0,Y.jsx)(`div`,{className:`h-[calc(100vh-115px)]`,children:(0,Y.jsxs)(bc,{center:[Lc[0],Lc[1]],zoom:17,className:`h-full w-full`,children:[(0,Y.jsx)(Nc,{}),(0,Y.jsx)(Cc,{attribution:`Tiles © Esri`,url:`https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}`}),e.map(e=>(0,Y.jsx)(xc,{position:[Number(e.latitude),Number(e.longitude)],icon:jc(Mc(e.sightingsCount)),children:(0,Y.jsx)(Sc,{children:(0,Y.jsxs)(`div`,{className:`space-y-2`,children:[(0,Y.jsx)(`div`,{className:`font-bold text-green-800`,children:e.name}),(0,Y.jsxs)(`div`,{children:[`目擊次數 (Sightings):`,` `,e.sightingsCount]}),(0,Y.jsx)(`div`,{className:`
                     text-sm
                     text-gray-500
-                  `,children:e.description})]})})},e.id))]})})}function Pc(){let[e,t]=(0,x.useState)([]),[n,r]=(0,x.useState)(null),[i,a]=(0,x.useState)(null),[o,s]=(0,x.useState)(``),[c,l]=(0,x.useState)(``);(0,x.useEffect)(()=>{u()},[]);async function u(){let{data:e,error:n}=await Js.from(`trees`).select(`*`);if(n){console.error(n);return}t(e||[])}async function d(e){if(e.preventDefault(),n===null||i===null){alert(`點擊地圖選擇位置 (Select location on map)`);return}let{error:t}=await Js.from(`trees`).insert([{name:o,species:c,latitude:n,longitude:i}]);if(t){console.error(t),alert(`新增失敗 (Failed to register tree)`);return}alert(`新增成功 (Tree registered)`),s(``),l(``),r(null),a(null),u()}return(0,Y.jsxs)(`div`,{className:`h-screen overflow-hidden bg-green-50`,children:[(0,Y.jsx)(`div`,{className:`
+                  `,children:e.description})]})})},e.id))]})})}function Fc(){let[e,t]=(0,x.useState)([]),[n,r]=(0,x.useState)(null),[i,a]=(0,x.useState)(null),[o,s]=(0,x.useState)(``),[c,l]=(0,x.useState)(``);(0,x.useEffect)(()=>{u()},[]);async function u(){let{data:e,error:n}=await Js.from(`trees`).select(`*`);if(n){console.error(n);return}t(e||[])}async function d(e){if(e.preventDefault(),n===null||i===null){alert(`點擊地圖選擇位置 (Select location on map)`);return}let{error:t}=await Js.from(`trees`).insert([{name:o,species:c,latitude:n,longitude:i}]);if(t){console.error(t),alert(`新增失敗 (Failed to register tree)`);return}alert(`新增成功 (Tree registered)`),s(``),l(``),r(null),a(null),u()}return(0,Y.jsxs)(`div`,{className:`h-screen overflow-hidden bg-green-50`,children:[(0,Y.jsx)(`div`,{className:`
           fixed
           top-0
           left-0
           right-0
           z-10
-        `,children:(0,Y.jsx)(Oc,{trees:e,selectedTrees:[],toggleTree:()=>{},onMapClick:(e,t)=>{r(e),a(t)},previewLatitude:n,previewLongitude:i})}),(0,Y.jsx)(`div`,{className:`
+        `,children:(0,Y.jsx)(kc,{trees:e,selectedTrees:[],toggleTree:()=>{},onMapClick:(e,t)=>{r(e),a(t)},previewLatitude:n,previewLongitude:i})}),(0,Y.jsx)(`div`,{className:`
           pt-[320px]
           h-screen
           overflow-y-auto
@@ -160,7 +164,7 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
                     block
                     mb-1
                     font-medium
-                  `,children:`植株種類 (Tree Species)`}),(0,Y.jsx)(`input`,{value:c,onChange:e=>l(e.target.value),required:!0,className:`
+                  `,children:`植株種類 (Tree Species)`}),(0,Y.jsx)(`input`,{value:c,onChange:e=>l(e.target.value),className:`
                     w-full
                     border
                     rounded-lg
@@ -177,7 +181,7 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
                   font-medium
                   hover:bg-green-800
                   transition-colors
-                `,children:`新增 (Register)`})]})]})})})]})}var Fc=[`臺灣獼猴 (Formosan Rock Macaque)`,`松鼠 (Squirrel sp.)`,`山豬 (Wild Boar)`,`山羌 (Reeves's Muntjac)`,`白鼻心 (Masked Palm Civet)`,`鳥類 (Bird sp.)`,`其他 (Other)`],Ic=[40.1033379,-88.2324657];function Lc(){return(0,Y.jsxs)(`div`,{className:`min-h-screen bg-green-50 pb-20`,children:[(0,Y.jsx)(`main`,{className:`max-w-5xl mx-auto p-4`,children:(0,Y.jsxs)(Nt,{children:[(0,Y.jsx)(F,{path:`/`,element:(0,Y.jsx)(kc,{})}),(0,Y.jsx)(F,{path:`/overview`,element:(0,Y.jsx)(Nc,{})}),(0,Y.jsx)(F,{path:`/settings`,element:(0,Y.jsx)(Pc,{})})]})}),(0,Y.jsxs)(`nav`,{className:`
+                `,children:`新增 (Register)`})]})]})})})]})}var Ic=[`臺灣獼猴 (Formosan Rock Macaque)`,`松鼠 (Squirrel sp.)`,`山豬 (Wild Boar)`,`山羌 (Reeves's Muntjac)`,`白鼻心 (Masked Palm Civet)`,`鳥類 (Bird sp.)`,`其他 (Other)`],Lc=[40.1033379,-88.2324657];function Rc(){return(0,Y.jsxs)(`div`,{className:`min-h-screen bg-green-50 pb-20`,children:[(0,Y.jsx)(`main`,{className:`max-w-5xl mx-auto p-4`,children:(0,Y.jsxs)(Nt,{children:[(0,Y.jsx)(F,{path:`/`,element:(0,Y.jsx)(Ac,{})}),(0,Y.jsx)(F,{path:`/overview`,element:(0,Y.jsx)(Pc,{})}),(0,Y.jsx)(F,{path:`/settings`,element:(0,Y.jsx)(Fc,{})})]})}),(0,Y.jsxs)(`nav`,{className:`
           fixed
           bottom-0
           left-0
@@ -213,4 +217,4 @@ Resources:`;for(let t of c){if(!t||typeof t!=`string`)throw Error(`@supabase/aut
               transition-all
 
               ${e?`text-green-700 font-semibold`:`text-gray-400`}
-            `,children:[(0,Y.jsx)(`span`,{className:`text-xl`,children:(0,Y.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,fill:`none`,viewBox:`0 0 24 24`,strokeWidth:1.5,stroke:`currentColor`,className:`size-10`,children:(0,Y.jsx)(`path`,{strokeLinecap:`round`,strokeLinejoin:`round`,d:`M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z`})})}),`植株 (Trees)`]})]})]})}zn.createRoot(document.getElementById(`root`)).render((0,Y.jsx)(x.StrictMode,{children:(0,Y.jsx)(vn,{children:(0,Y.jsx)(Lc,{})})}));
+            `,children:[(0,Y.jsx)(`span`,{className:`text-xl`,children:(0,Y.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,fill:`none`,viewBox:`0 0 24 24`,strokeWidth:1.5,stroke:`currentColor`,className:`size-10`,children:(0,Y.jsx)(`path`,{strokeLinecap:`round`,strokeLinejoin:`round`,d:`M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z`})})}),`植株 (Trees)`]})]})]})}zn.createRoot(document.getElementById(`root`)).render((0,Y.jsx)(x.StrictMode,{children:(0,Y.jsx)(vn,{children:(0,Y.jsx)(Rc,{})})}));
