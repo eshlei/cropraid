@@ -1,6 +1,7 @@
 import { divIcon } from "leaflet";
 import { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, useMap, useMapEvents } from "react-leaflet";
+import { defaultLocation } from "../App";
 
 type MapProps = {
   trees: any[];
@@ -99,7 +100,7 @@ export default function Map({
 
   return (
     <MapContainer
-      center={[40.1100, -88.2272]}
+      center={[defaultLocation[0], defaultLocation[1]]}
       zoom={20}
       className="h-[300px] w-full z-0"
     >

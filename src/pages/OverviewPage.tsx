@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { defaultLocation } from "../App";
 
 import {
   MapContainer,
@@ -113,7 +114,7 @@ export default function OverviewPage() {
     <div className="h-[calc(100vh-115px)]">
 
       <MapContainer
-        center={[40.1100, -88.2272]}
+        center={[defaultLocation[0], defaultLocation[1]]}
         zoom={17}
         className="h-full w-full"
       >

@@ -17,6 +17,10 @@ export const speciesOptions = [
   "其他 (Other)",
 ];
 
+export const defaultLocation = [
+  40.1033379, -88.2324657
+];
+
 export default function App() {
   return (
     <div className="min-h-screen bg-green-50 pb-20">
