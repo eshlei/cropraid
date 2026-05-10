@@ -127,7 +127,7 @@ export default function SettingsPage() {
                 text-green-800
               "
             >
-              新增植株 (Register New Tree)
+              新增 (Register)
             </h1>
 
             <p className="mb-4 text-sm text-gray-600">
