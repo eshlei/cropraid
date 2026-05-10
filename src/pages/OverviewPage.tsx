@@ -61,6 +61,9 @@ function CenterMap() {
 
       (error) => {
         console.error(error);
+        alert(
+          "無法取得位置 (Unable to retrieve location)"
+        );
       }
     );
   }, [map]);

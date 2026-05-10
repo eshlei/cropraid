@@ -74,9 +74,7 @@ export default function Map({
         },
         (error) => {
           console.error(error);
-          alert(
-            "Unable to retrieve location"
-          );
+          alert("無法取得位置 (Unable to retrieve location)");
         }
       );
     }, [map]);
