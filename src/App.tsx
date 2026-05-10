@@ -1,7 +1,7 @@
 import {
   Routes,
   Route,
-  Link,
+  NavLink,
 } from "react-router-dom";
 import ReportPage from "./pages/ReportPage";
 import OverviewPage from "./pages/OverviewPage";
@@ -58,16 +58,23 @@ export default function App() {
           py-3
         "
       >
-        <Link
+        <NavLink
           to="/"
-          className="
-            flex
-            flex-col
-            items-center
-            text-sm
-            text-green-700
-            hover:text-green-900
-          "
+          className={({ isActive }) =>
+            `
+              flex
+              flex-col
+              items-center
+              text-sm
+              transition-all
+
+              ${
+                isActive
+                  ? "text-green-700 font-semibold"
+                  : "text-gray-400"
+              }
+            `
+          }
         >
           <span className="text-xl">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
@@ -76,18 +83,25 @@ export default function App() {
           </span>
 
           通報 (Report)
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/overview"
-          className="
-            flex
-            flex-col
-            items-center
-            text-sm
-            text-green-700
-            hover:text-green-900
-          "
+          className={({ isActive }) =>
+            `
+              flex
+              flex-col
+              items-center
+              text-sm
+              transition-all
+
+              ${
+                isActive
+                  ? "text-green-700 font-semibold"
+                  : "text-gray-400"
+              }
+            `
+          }
         >
           <span className="text-xl">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
@@ -97,18 +111,25 @@ export default function App() {
           </span>
 
           統計 (Trends)
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/settings"
-          className="
-            flex
-            flex-col
-            items-center
-            text-sm
-            text-green-700
-            hover:text-green-900
-          "
+          className={({ isActive }) =>
+            `
+              flex
+              flex-col
+              items-center
+              text-sm
+              transition-all
+
+              ${
+                isActive
+                  ? "text-green-700 font-semibold"
+                  : "text-gray-400"
+              }
+            `
+          }
         >
           <span className="text-xl">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
@@ -117,7 +138,7 @@ export default function App() {
           </span>
 
           植株 (Trees)
-        </Link>
+        </NavLink>
       </nav>
     </div>
   );
