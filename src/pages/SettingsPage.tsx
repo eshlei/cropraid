@@ -127,7 +127,7 @@ export default function SettingsPage() {
                 text-green-800
               "
             >
-              新增 (Register)
+              新增植株 (Register New Tree)
             </h1>
 
             <p className="mb-4 text-sm text-gray-600">
@@ -231,7 +231,7 @@ export default function SettingsPage() {
                   transition-colors
                 "
               >
-                新增植株 (Register New Tree)
+                新增 (Register)
               </button>
             </form>
           </div>

@@ -147,16 +147,12 @@ export default function OverviewPage() {
             <Popup>
               <div className="space-y-2">
 
-                <div className="font-bold">
+                <div className="font-bold text-green-800">
                   {tree.name}
                 </div>
 
                 <div>
-                  Species: {tree.species}
-                </div>
-
-                <div>
-                  Sightings:{" "}
+                  目擊次數 (Sightings):{" "}
                   {tree.sightingsCount}
                 </div>
 
