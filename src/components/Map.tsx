@@ -64,6 +64,19 @@ const pinIcon = divIcon({
   iconAnchor: [12, 12],
 });
 
+const miniPinIcon = divIcon({
+  className: "",
+
+  html: `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" class="size-3">
+      <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+    </svg>
+  `,
+
+  iconSize: [24, 24],
+  iconAnchor: [12, 12],
+});
+
 export default function Map({
   trees,
   selectedTrees,
@@ -86,7 +99,7 @@ export default function Map({
             position.coords.latitude,
             position.coords.longitude,
           ],
-          20
+          19
         );
       },
 
@@ -153,7 +166,8 @@ export default function Map({
           defaultLocation[0],
           defaultLocation[1],
         ]}
-        zoom={20}
+        zoom={19}
+        maxZoom={22}
         className="h-[300px] w-full z-0"
       >
         <CenterMap />
@@ -161,6 +175,8 @@ export default function Map({
         <MapClickHandler />
 
         <TileLayer
+          maxZoom={22}
+          maxNativeZoom={19}
           attribution='Tiles &copy; Esri'
           url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
         />
@@ -181,7 +197,10 @@ export default function Map({
               icon={
                 isSelected
                   ? selectedIcon
-                  : unselectedIcon
+                  : (
+                    onMapClick
+                      ? miniPinIcon
+                      : unselectedIcon)
               }
               opacity={
                 isSelected ? 1 : 0.75

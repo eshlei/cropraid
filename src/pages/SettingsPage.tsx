@@ -205,7 +205,6 @@ export default function SettingsPage() {
                       e.target.value
                     )
                   }
-                  required
                   className="
                     w-full
                     border
