@@ -114,34 +114,38 @@ export default function Map({
   }
 
   function CenterMap() {
-    const map = useMap();
+  const map = useMap();
 
-    useEffect(() => {
-      setMapInstance(map);
+  useEffect(() => {
 
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          map.setView(
-            [
-              position.coords.latitude,
-              position.coords.longitude,
-            ],
-            map.getZoom()
-          );
-        },
+    if (mapInstance) return;
 
-        (error) => {
-          console.error(error);
+    setMapInstance(map);
 
-          alert(
-            "無法取得位置 (Unable to retrieve location)"
-          );
-        }
-      );
-    }, [map]);
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        map.setView(
+          [
+            position.coords.latitude,
+            position.coords.longitude,
+          ],
+          map.getZoom()
+        );
+      },
 
-    return null;
-  }
+      (error) => {
+        console.error(error);
+
+        alert(
+          "無法取得位置 (Unable to retrieve location)"
+        );
+      }
+    );
+
+  }, []);
+
+  return null;
+}
 
   function MapClickHandler() {
     useMapEvents({
@@ -206,7 +210,8 @@ export default function Map({
                 isSelected ? 1 : 0.75
               }
               eventHandlers={{
-                click: () => {
+                click: (e) => {
+                  e.originalEvent.stopPropagation();
                   toggleTree(tree.id);
                 },
               }}
